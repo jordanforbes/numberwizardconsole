@@ -20,6 +20,7 @@ public class NumberWizard : MonoBehaviour
 		Debug.Log ("Your lowest number is: "+ loNum);
 		Debug.Log ("Tell Me if Your number is higher or lower than" + guess);
 		Debug.Log ("Up Arrow Key = higher, Down Arrow Key = lower, enter = correct");
+		hiNum = hiNum + 1;
 	}
 	
 	// Update is called once per frame
@@ -29,6 +30,7 @@ public class NumberWizard : MonoBehaviour
 		{
 			Debug.Log("Up Arrow key was pressed.");
 			loNum = guess;
+			guess = (hiNum + loNum) / 2;
 			Debug.Log (guess);
 
 		}
@@ -36,6 +38,7 @@ public class NumberWizard : MonoBehaviour
 		{
 			Debug.Log("Down Arrow key was pressed.");
 			hiNum = guess;
+			guess = (hiNum + loNum) / 2;
 			Debug.Log (guess);
 
 		}
